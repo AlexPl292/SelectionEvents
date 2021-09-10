@@ -7,12 +7,6 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.alexpl292.selectionevents.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.alexpl292.selectionevents.services.MyProjectService"/>
+        <editorFactoryListener implementation="com.github.alexpl292.selectionevents.listeners.MyListener"/>
     </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.alexpl292.selectionevents.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
 </idea-plugin>
